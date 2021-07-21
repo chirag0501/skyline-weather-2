@@ -1,0 +1,13 @@
+<app-page-header>
+  <h1 class="header">Skyline Weather <mat-icon>wb_sunny</mat-icon></h1>
+  <h2 class="sub-header">Five Days forecast for <span>{{ cityName }} <mat-icon>location_city</mat-icon></span></h2>
+</app-page-header>
+
+<div class="five-days-forecast" role="list">
+  <ng-container *appErrorGuard="forecast; data as data">
+    <ng-container *ngFor="let weather of forecast">
+        <app-forecast [weather]="weather" role="listitem" ></app-forecast>
+        <mat-divider></mat-divider>
+    </ng-container>
+  </ng-container>
+</div>

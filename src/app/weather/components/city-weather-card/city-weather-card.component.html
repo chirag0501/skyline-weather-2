@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar>
+      <app-weather-condition-icon [weatherCondition]="weather.weather[0]"></app-weather-condition-icon>
+    </div>
+    <mat-card-title>{{ weather.name }} </mat-card-title>
+    <mat-card-subtitle><strong>Temp:</strong> {{ weather.main.temp | number:'1.0-0' }}°C </mat-card-subtitle>
+    <mat-card-subtitle><strong>Sunrise:</strong> {{ (weather.sys.sunrise * 1000 ) | date : 'mediumTime'}} </mat-card-subtitle>
+    <mat-card-subtitle><strong>Sunset:</strong> {{ (weather.sys.sunset * 1000 ) | date : 'mediumTime' }} </mat-card-subtitle>
+  </mat-card-header>
+</mat-card>

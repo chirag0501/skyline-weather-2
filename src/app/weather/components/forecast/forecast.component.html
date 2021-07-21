@@ -1,0 +1,6 @@
+<div class="date-time-wrapper">
+  <time class="date">{{ weather?.dt_txt | date : 'MMM d' }}</time>
+  <time class="time">{{ weather?.dt_txt | date: 'shortTime' }}</time>
+</div>
+<span class="temperature">{{ weather.main.temp  - 273.15 | number:'1.0-0' }}°</span>
+<span class="sea-level"><mat-icon>waves</mat-icon> {{ weather.main.sea_level / 10 }} Meter</span>
